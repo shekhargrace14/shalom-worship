@@ -10,7 +10,9 @@ const Navbar = () => {
     <>
       <div className={styles.header}>
         <div className={styles.logo}>
-          <a href='/'><h1>Shalom Worship</h1></a>
+          <Link href='/'>
+            <a ><h1>Shalom Worship</h1></a>
+          </Link>
         </div>
 
         <div className={ showMediaIcons ? `${styles.menu_links} ${styles.mobile_menu_links}` : `${styles.menu_links}`}>
@@ -24,9 +26,9 @@ const Navbar = () => {
         </div>
         <div className={styles.social_media}>
           <ul className={styles.social_media_desktop}>
-            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank"><FaFacebook/></a></li>
-            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank"><FaTwitter/></a></li>
-            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank"><FaInstagram/></a></li>
+            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank" rel="noreferrer" ><FaFacebook/></a></li>
+            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank" rel="noreferrer" ><FaTwitter/></a></li>
+            <li className={styles.li}><a href='https://www.youtube.com/watch?v=T-qoHFBcFHw' target="_blank" rel="noreferrer" ><FaInstagram/></a></li>
           </ul>
           <div className={styles.hamburger_menu}>
             <a href='#' onClick= { () => setShowMediaIcons(!showMediaIcons)}><GiHamburgerMenu/></a>
