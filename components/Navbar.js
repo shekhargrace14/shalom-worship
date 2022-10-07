@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import  styles from "../styles/Navbar.module.css";
-// import "../"
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons]= useState(false);
@@ -17,10 +16,10 @@ const Navbar = () => {
         <div className={ showMediaIcons ? `${styles.menu_links} ${styles.mobile_menu_links}` : `${styles.menu_links}`}>
             <ul className={styles.ul}>
               <li className={styles.li}><Link href="/"><a>Home</a></Link></li>
-              <li className={styles.li}><Link href="about"><a>About</a></Link></li>
+              <li className={styles.li}><Link href="/about"><a>About</a></Link></li>
               {/* <li className={styles.li}><Link href="bands"><a>Bands</a></Link></li> */}
               {/* <li className={styles.li}><Link href="artist"><a>Artist</a></Link></li> */}
-              <li className={styles.li}><Link href="contact"><a>Contact</a></Link></li>
+              <li className={styles.li}><Link href="/contact"><a>Contact</a></Link></li>
             </ul>
         </div>
         <div className={styles.social_media}>

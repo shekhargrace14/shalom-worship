@@ -17,8 +17,10 @@ const errorPage = () => {
   return (
     <>
         <Navbar/>
+        <h2>
 
         404 page
+        </h2>
         <a  onClick={handleInput}>Back to Home</a>
 
     </>
