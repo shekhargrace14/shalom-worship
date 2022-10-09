@@ -4,16 +4,16 @@
 
 
 // const errorPage = () => {
-//     const router = useRouter();
-//     const handleInput =()=>{
-//         router.push("/index")
-//     }
-//     useEffect(()=>{
-//         setTimeout(()=>{
-//             router.push("/")
-//         }, 3000);
+//     // const router = useRouter();
+//     // const handleInput =()=>{
+//     //     router.push("/index")
+//     // }
+//     // useEffect(()=>{
+//     //     setTimeout(()=>{
+//     //         router.push("/")
+//     //     }, 3000);
 
-//     })
+//     // })
 //   return (
 //     <>
 //         <Navbar/>
@@ -21,10 +21,20 @@
 
 //         404 page
 //         </h2>
-//         <a  onClick={handleInput}>Back to Home</a>
+//         {/* <a  onClick={handleInput}>Back to Home</a> */}
 
 //     </>
 //   )
 // }
 
 // export default errorPage;
+
+import React from 'react'
+
+const errorPage = () => {
+  return (
+    <div>404</div>
+  )
+}
+
+export default errorPage
