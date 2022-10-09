@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import  styles from "../styles/SongMain.module.css"
+import Transpose from './Transpose';
+import data from './Data';
 
 
 const SongMain = () => {
@@ -8,6 +10,7 @@ const SongMain = () => {
     const toggleTab =(index)=>{
         setToggleState(index);
     }
+
   return (
     <>
         <div className={styles.master}>
@@ -40,16 +43,16 @@ const SongMain = () => {
                 <div className={styles.control}>
                     <button 
                         // className={toggleState ===1 ? "lyrics active_button" : "lyrics button"}
-                        className={toggleState ===1 ? `${styles.lyrics} ${styles.active_button}` : `${styles.lyrics} ${styles.button}`}
+                        className={toggleState ===1 ? `${styles.chords} ${styles.active_button}` : `${styles.lyrics} ${styles.button}`}
 
                         onClick={()=> toggleTab(1)}    
-                        >Lyrics
+                        >Chords
                     </button>
                     <button 
-                        className={toggleState ===2 ? `${styles.chords} ${styles.active_button}` : `${styles.chords} ${styles.button}`}
+                        className={toggleState ===2 ? `${styles.lyrics} ${styles.active_button}` : `${styles.lyrics} ${styles.button}`}
 
                         onClick={()=> toggleTab(2)}
-                        >Chords
+                        >Lyrics
                     </button>
                     <button 
                         className={toggleState ===3 ? `${styles.hindi} ${styles.active_button}` : `${styles.hindi} ${styles.button}`}
@@ -61,6 +64,16 @@ const SongMain = () => {
 
                 {/* <div className={toggleState ===1 ? "box1 active" : "box1"}> */}
                 <div className={toggleState ===1 ? `${styles.box1} ${styles.active}` : `${styles.box1}`}>
+                    <br/>
+                    <Transpose/>
+
+                        
+                    <br/>
+                    <br/>
+                    
+                </div>
+                {/* <div className={toggleState ===2 ? "box2 active" : "box2"}> */}
+                <div className={toggleState ===2 ? `${styles.box2} ${styles.active}` : `${styles.box2}`}>
  
                     <h2>
                         Papa | Lyrics |Bridge Music ft. Prince Mulla, Zayvan Sam Alex Pasula
@@ -155,160 +168,6 @@ const SongMain = () => {
                         <br/>
                         Mera latta hatakar labada diya (x 2)
           
-                    </p>
-                </div>
-                {/* <div className={toggleState ===2 ? "box2 active" : "box2"}> */}
-                <div className={toggleState ===2 ? `${styles.box2} ${styles.active}` : `${styles.box2}`}>
-
-                    <h2>
-                        Papa | Lyrics |Bridge Music ft. Prince Mulla, Zayvan Sam Alex Pasula
-                    </h2>
-                    <p className={styles.p}>
-                        INTRO: C#/ G#/C / A#m // A#m / F#/ C#// (x 2)
-                        <br/>                   
-                        <br/>                    
-                        VERSE 1:
-                        <br/>                    
-                        C#			G#/C 		      A#m
-                        <br/>                    
-                        Tujhe chhod mein chal pada
-                        <br/>                    
-                        A#m 		F#		C#
-                        <br/>                    
-                        Dhundne ghar har jagah
-                        <br/>                    
-                        C#		G#/C 		A#m
-                        <br/>                    
-                        Khoj me mein kho gaya
-                        <br/>                    
-                        A#m 		F#		    C#
-                        <br/>                    
-                        Khud ko pehchan na saka
-                        <br/>                    
-                        <br/>                 
-                        PRE-CHORUS 1:
-                        <br/>                    
-                        	F#		     G#		    G#sus    C#
-                        <br/>                    
-                        Rehamat ke dariya mein dubaya mujhe
-                        <br/>                   
-                        		F#		G#		Fm 	A#m
-                        <br/>                    
-                        Uss se zariya banakar chalaya mujhe (x 2)
-                                            
-                        <br/>
-                        <br/>                   
-                        CHORUS:
-                        <br/>                
-                        A#m    Fm
-                        <br/>                
-                        Papa, Papa
-                        <br/>                
-                        F#			G#
-                        <br/>                
-                        Beta mein Tera ( x 2)
-                                            
-                        <br/>
-                        <br/>               
-                        INTRO: C#/// G#/// F#/// G#(x 2)
-                        <br/>                  
-                        <br/>                    
-                        VERSE 2:
-                        <br/>                    
-                        		C#		      G#/C    A#m
-                        <br/>                    
-                        Tujhe chhod mein jau kaha
-                        <br/>                    
-                        A#m 	  F#			C#
-                        <br/>                    
-                        Tu hi toh ghar hai mera
-                        <br/>                    
-                        C#		G#/C 	   A#m
-                        <br/>                    
-                        Na tha mujhe ye pata
-                        <br/>                    
-                        A#m 	     F# 	    C#
-                                            
-                        Beta mein tha hi Tera
-                                            
-                        <br/>   
-                        <br/>                 
-                        PRE-CHORUS 2:
-                        <br/>                    
-                        	F#	G#	   G#sus    C#
-                        <br/>                    
-                        Nazar Teri kabhi na hati
-                        <br/>                    
-                        	F#	    G#	     Fm 		  A#m
-                        <br/>                    
-                        Mehfooz hoon Teri parchhai mein
-                        <br/>                    
-                        	F#	G#	  G#sus    C#
-                        <br/>                    
-                        Nazar Teri kabhi na hati
-                        <br/>                    
-                        	F#	     G#	G#/C		A#m
-                        <br/>
-                        Mehfooz hoon Teri parchhai mein             
-                        <br/>
-                        <br/>                   
-                        CHORUS
-                        <br/>
-                        <br/>                  
-                        TAG:
-                        <br/>                    
-                        	D#m 		G#			C#
-                        <br/>                    
-                        Teri aankhon ki putli hoon Papa
-                        <br/>                    
-                        A#m 	D#m 	    G#		    C#    A#m
-                        <br/>                    
-                        Mein - aankhon ki putli hoon Papa
-                        <br/>                    
-                        	    D#m	       G#			C#/F   A#m
-                        <br/>                    
-                        Teri aankhon ki putli hoon Papa
-                        <br/>                    
-                        	    D#m	       G#			C#/
-                        <br/>                    
-                        Teri aankhon ki putli hoon Papa                
-                        <br/>
-                        <br/>                    
-                        BRIDGE:
-                        <br/>                    
-                        C#							D#m
-                        <br/>                    
-                        Paraya na hoon mein - Thukraya na Tu ne
-                        <br/>                    
-                        C#					D#m
-                        <br/>                    
-                        Sharmindagi se - Nikaala hai Tu ne (x 2)
-                        <br/>                     
-                        C#						C#				C#/F	Fm
-                        <br/> 
-                        Paraya na hoon mein - Thukraya na Tu ne
-                        <br/>                    
-                        C#							C#
-                        <br/>                
-                        Paraya na hoon mein - Thukraya na Tu ne
-                        <br/>                
-                        C#/ F				 G#				(C#/F – A#m)
-                        <br/>                
-                        Sharmindagi se - Nikaala hai Tu ne
-                        <br/>                
-                        D#m			 C#/F
-                        <br/>
-                        	Gale lagakar chooma mujhe
-                        <br/>                    
-                        	     F# 			G#
-                        <br/>                
-                        Mera latta hatakar labada diya (x 2)
-                        <br/>
-                        <br/>                
-                        CHORUS 
-                        <br/>
-                        <br/>                
-                        TAG
                     </p>
                 </div>
                 {/* <div className={toggleState ===3 ? "box3 active" : "box3"}> */}
